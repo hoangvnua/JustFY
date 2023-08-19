@@ -9,7 +9,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/admin/theme/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/admin/theme/dist/js/pages/dashboard3.js"></script>
+{{-- <script src="/admin/theme/dist/js/pages/dashboard3.js"></script> --}}
 
 <!-- overlayScrollbars -->
 <script src="/admin/theme/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>

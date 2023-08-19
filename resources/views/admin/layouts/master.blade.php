@@ -8,16 +8,36 @@
 
     @include('admin.includes.link')
 
+    @yield('style')
+    <style>
+        .bg-color {
+            background-color: #182537;
+        }
+
+        .text-color ul li a p {
+            color: #fff;
+        }
+
+        .text-color ul li:hover {
+            background-color: #243041;
+        }
+
+        .text-color ul li {
+            padding: 8px 0;
+            font-size: 16px;
+        }
+    </style>
+
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper mb-5">
         <!-- Navbar -->
         @include('admin.layouts.header')
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        @include('admin.components.sidebar')
+        @include('admin.layouts.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -31,7 +51,7 @@
         <!-- /.content-wrapper -->
 
         <!-- Main Footer -->
-        @include('admin.layouts.footer')
+        {{-- @include('admin.layouts.footer') --}}
     </div>
     <!-- ./wrapper -->
 

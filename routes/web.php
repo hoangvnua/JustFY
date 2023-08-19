@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ProductController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,11 @@ use App\Http\Controllers\Admin\ProductController;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::resource('product', ProductController::class);
+Route::resource('/products', ProductController::class);
+Route::get('/products/delete/list', function(){
+    return view('admin.products.listDelete');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

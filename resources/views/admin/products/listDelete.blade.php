@@ -1,19 +1,19 @@
 @extends('admin.layouts.master')
 
 @section('title')
-    Danh sách sản phẩm
+    Danh sách sản phẩm đã xóa
 @endsection
 
 @section('content')
     <div class="col-2 float-right" style="right: 10px; padding-bottom: 10px">
-        <a href="/products/create" type="button" class="btn btn-block btn-primary btn-flat"><i class="fas fa-plus fa-xs"></i>
-            Thêm mới</a>
+        <a href="/products/create" type="button" class="btn btn-block btn-primary btn-flat">
+            Danh sách sản phẩm</a>
     </div>
     <div class="row" style="width: 100%;">
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Danh sách sản phẩm</h3>
+                    <h3 class="card-title">Danh sách sản phẩm đã xóa</h3>
 
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
@@ -42,17 +42,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($products as $product)
-                                <tr>
-                                    <td>{{ $product->ma }}</td>
-                                    <td><a href="#">{{ $product->TenSP }}</a></td>
-                                    <td>{{ $product->NhomSP }}</td>
-                                    <td>{{ $product->GiaNhap }}</td>
-                                    <td><span class="tag tag-success">{{ $product->GiaLe }}</span></td>
-                                    <td>{{ $product->GiaSi }}</td>
-                                    <td>action</td>
-                                </tr>
-                            @endforeach
+                            <tr>
+                                <td>183</td>
+                                <td><a href="#">hihi</a></td>
+                                <td>11-7-2014</td>
+                                <td>111</td>
+                                <td><span class="tag tag-success">Approved</span></td>
+                                <td>111</td>
+                                <td>action</td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>
