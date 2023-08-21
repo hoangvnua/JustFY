@@ -9,6 +9,57 @@
         .hover li:hover {
             background: #F2F9FF;
         }
+
+        .info-box-custom {
+            display: -ms-flexbox;
+            display: flex;
+            margin: 1rem 0;
+            padding: 0 0 0 10px;
+            position: relative;
+            width: 100%;
+        }
+
+        .info-box-icon-custom {
+            border-radius: 50%;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -ms-flexbox;
+            display: flex;
+            font-size: 1.875rem;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            width: 63px;
+        }
+
+        .info-box-content-custom {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-pack: center;
+            justify-content: center;
+            line-height: 1.8;
+            -ms-flex: 1;
+            flex: 1;
+            padding: 0 10px;
+            overflow: hidden;
+        }
+
+        .info-box-number-custom {
+            display: block;
+            margin-top: 0.25rem;
+            font-weight: 700;
+        }
+
+        .title-custom {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #E8EAEB;
+            height: 64px;
+            padding: 0 16px;
+            align-items: center;
+        }
     </style>
 @endsection
 
@@ -85,114 +136,79 @@
 @section('content')
     <!-- Main content -->
 
-    <div>
-        <h3>Kết quả kinh doanh trong ngày</h3>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-info">
-                <div class="inner">
-                    <h3>150</h3>
-
-                    <p>Đơn hàng</p>
-                </div>
-                <div class="icon">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
-                <a href="#" class="small-box-footer">
-                    Xem thêm <i class="fas fa-arrow-circle-right"></i>
-                </a>
-            </div>
+    <div class="card">
+        <div class="title-custom">
+            <h5>KẾT QUẢ KINH DOANH TRONG NGÀY</h5>
+            <select class="custom-select rounded-0" id="exampleSelectRounded0" style="width: 225px;">
+                <option>Tất cả các chi nhánh</option>
+                <option>Value 2</option>
+            </select>
         </div>
-        <div class="col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-success">
-                <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="info-box-custom">
+                    <span class="info-box-icon-custom bg-info"><i class="fas fa-dollar-sign"></i></span>
 
-                    <p>Doanh thu</p>
+                    <div class="info-box-content-custom">
+                        <span class="info-box-text-custom">Doanh thu</span>
+                        <span class="info-box-number-custom">1,410</span>
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
-                <div class="icon">
-                    <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="#" class="small-box-footer">
-                    Xem thêm <i class="fas fa-arrow-circle-right"></i>
-                </a>
+                <!-- /.info-box -->
             </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-warning">
-                <div class="inner">
-                    <h3>44</h3>
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="info-box-custom">
+                    <span class="info-box-icon-custom bg-success"><i class="fas fa-box"></i></span>
 
-                    <p>Người đăng kí mới</p>
+                    <div class="info-box-content-custom">
+                        <span class="info-box-text-custom">Đơn hàng mới</span>
+                        <span class="info-box-number-custom">1,410</span>
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
-                <div class="icon">
-                    <i class="fas fa-user-plus"></i>
-                </div>
-                <a href="#" class="small-box-footer">
-                    Xem thêm <i class="fas fa-arrow-circle-right"></i>
-                </a>
+                <!-- /.info-box -->
             </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-danger">
-                <div class="inner">
-                    <h3>65</h3>
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="info-box-custom">
+                    <span class="info-box-icon-custom bg-warning"><i class="fas fa-undo-alt" style="color: #fff"></i></span>
 
-                    <p>Sản phẩm bán chạy</p>
+                    <div class="info-box-content-custom">
+                        <span class="info-box-text-custom">Đơn hàng trả</span>
+                        <span class="info-box-number-custom">1,410</span>
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
-                <div class="icon">
-                    <i class="fas fa-chart-pie"></i>
+                <!-- /.info-box -->
+            </div>
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="info-box-custom">
+                    <span class="info-box-icon-custom bg-danger"><i class="far fa-times-circle"></i></span>
+
+                    <div class="info-box-content-custom">
+                        <span class="info-box-text-custom">Đơn hàng hủy</span>
+                        <span class="info-box-number-custom">1,410</span>
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
-                <a href="#" class="small-box-footer">
-                    Xem thêm <i class="fas fa-arrow-circle-right"></i>
-                </a>
+                <!-- /.info-box -->
             </div>
-        </div>
-        <!-- ./col -->
-    </div>
-
-    <div class="col-lg-6">
-        <div class="card card-danger">
-            <div class="card-header">
-                <h3 class="card-title">Pie Chart</h3>
-
-            </div>
-            <div class="card-body">
-                <canvas id="pieChart"
-                    style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-            </div>
-            <!-- /.card-body -->
         </div>
     </div>
 
-    <div class="col-lg-6">
+    <div class="col-lg-12">
         <div class="card">
-
-            <!-- /.card -->
-
+            <h class="title-custom">DOANH THU BÁN HÀNG</h>
+            <canvas id="myChart" style="height: 350px;"></canvas>
         </div>
         <!-- /.col-md-6 -->
     </div>
+
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header border-0">
                 <h3 class="card-title">Products</h3>
-                <div class="card-tools">
-                    <a href="#" class="btn btn-tool btn-sm">
-                        <i class="fas fa-download"></i>
-                    </a>
-                    <a href="#" class="btn btn-tool btn-sm">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                </div>
+
             </div>
             <div class="card-body table-responsive p-0">
                 <table class="table table-striped table-valign-middle">
@@ -301,39 +317,27 @@
 
 @section('script')
     <script>
-        $(function() {
-            //-------------
-            //- PIE CHART -
-            //-------------
-            // Get context with jQuery - using jQuery's .get() method.
-            var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
-            var pieData = {
-                labels: [
-                    'Chrome',
-                    'IE',
-                    'FireFox',
-                    'Safari',
-                    'Opera',
-                    'Navigator',
-                ],
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'test'],
                 datasets: [{
-                    data: [700, 500, 400, 600, 300, 100],
-                    backgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 8, 3, 5],
+                    borderWidth: 1,
+                    backgroundColor: 'rgb(74, 169, 207)',
+
                 }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
             }
-            var pieOptions = {
-                maintainAspectRatio: false,
-                responsive: true,
-            }
-            //Create pie or douhnut chart
-            // You can switch between pie and douhnut using the method below.
-            new Chart(pieChartCanvas, {
-                type: 'pie',
-                data: pieData,
-                options: pieOptions
-            })
-
-
-        })
+        });
     </script>
 @endsection
